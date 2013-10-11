@@ -8,9 +8,9 @@ var product = new Product({
 var productView = new ProductView({
 	model: product,
 	el: '.product'
-}); 
-  
-$('.store').append(productView.el);  
-productView.render();  
+});
+
+$('.store').append(productView.el); 
+productView.render();
 
 })();

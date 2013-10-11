@@ -7,7 +7,7 @@
   });
 
   window.Inventory = Backbone.Collection.extend({
-  	model: Product
+		model: Product
   });
 
 })();

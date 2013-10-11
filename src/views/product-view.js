@@ -4,10 +4,10 @@
 
   window.ProductView = Backbone.View.extend({
     render: function () {
-    	$(this.el).html( this.model.get('name') );
-    	var newHtml = productTemplate( this.model.toJSON() );
+			$(this.el).html( this.model.get('name') );
+			var newHtml = productTemplate( this.model.toJSON() );
 			$('.store').html(newHtml);
-    	console.log('productView!', this.model.get('name'));
+			console.log('productView!', this.model.get('name'));
     }
   });
 
