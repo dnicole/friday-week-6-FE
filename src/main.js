@@ -4,7 +4,7 @@ var stuff = new Inventory();
 
 var stuffListView = new StoreView({
 	collection: stuff,
-	el: '#product'
+	el: '#store'
 });
 
 stuff.add([
