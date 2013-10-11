@@ -1,8 +1,9 @@
 (function () {
 
-  window.DummyView = Backbone.View.extend({
-    initialize: function (options) {
-      this.bar = 'init val';
+  window.ProductView = Backbone.View.extend({
+    render: function () {
+    	$(this.el).html( this.model.get('name') );
+    	console.log('productView!', this.model.get('name'));
     }
   });
 
