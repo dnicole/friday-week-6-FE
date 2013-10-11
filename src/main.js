@@ -1,16 +1,29 @@
 (function () {
 
-var product = new Product({
-	name: 'stripey socks',
-	price: '$10'
+var stuff = new Inventory();
+
+var stuffListView = new StoreView({
+	collection: stuff,
+	el: '#product'
 });
 
-var productView = new ProductView({
-	model: product,
-	el: '.product'
-});
+stuff.add([
+    { name: 'stripey socks', price: '$10' },
+    { name: 'spotted socks', price: '$9' },
+    { name: 'space pants', price: '$15' },
+  ]);
 
-$('.store').append(productView.el); 
-productView.render();
+// var product = new Product({
+//	name: 'stripey socks',
+//	price: '$10'
+// });
+
+// var productView = new ProductView({
+//	model: product,
+//	el: '.product'
+// });
+
+// $('.store').append(productView.el);
+// productView.render();
 
 })();

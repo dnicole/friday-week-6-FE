@@ -5,11 +5,13 @@ window.StoreView = Backbone.View.extend({
 			this.listenTo(this.collection, 'add', this.onProductAdd);
     },
     onProductAdd: function (newProduct) {
-			newProduct = ProductView.new({
-				model: Product,
+			var productView = new ProductView({
+				model: newProduct
 			});
-			console.log(newProduct);
+			newProduct = new Product({})
+			console.log(productView);
 			productView.render();
+			$(this.el).append(productView.el)
     }
   });
 
